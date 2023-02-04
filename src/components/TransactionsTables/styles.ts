@@ -6,6 +6,14 @@ export const Container = styled.div`
     width: 100%;
     border-spacing: 0 0.5rem;
 
+    div {
+      background-color: var(--shape);
+      width: 150%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0;
+    }
+
     th {
       color: var(--text-body);
       font-weight: 400;

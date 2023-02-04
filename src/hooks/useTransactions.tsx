@@ -41,6 +41,7 @@ export const TransactionsProvider = ({
       ...transactionInput,
       createdAt: new Date(),
     });
+    
     const { transaction } = response.data;
     setTransactions([...transactions, transaction]);
   }

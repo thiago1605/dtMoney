@@ -11,8 +11,12 @@ export function TransactionsTables() {
           <tr>
             <th>Título</th>
             <th>Valor</th>
-            <th>Categoria</th>
-            <th>Data</th>
+            {window.screen.width >= 768 && (
+              <>
+                <th>Categoria</th>
+                <th>Data</th>
+              </>
+            )}
           </tr>
         </thead>
         <tbody>
@@ -26,10 +30,16 @@ export function TransactionsTables() {
                     currency: "BRL",
                   }).format(amount)}
                 </td>
-                <td>{category}</td>
-                <td>
-                  {new Intl.DateTimeFormat("pt-br").format(new Date(createdAt))}
-                </td>
+                {window.screen.width >= 768 && (
+                  <>
+                    <td>{category}</td>
+                    <td>
+                      {new Intl.DateTimeFormat("pt-br").format(
+                        new Date(createdAt)
+                      )}
+                    </td>
+                  </>
+                )}
               </tr>
             )
           )}
